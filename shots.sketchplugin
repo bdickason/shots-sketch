@@ -1,0 +1,13 @@
+// Duplicate the selected object a number of times
+
+try {
+var fileName = '~/Downloads/' + [doc askForUserInput:"Please Enter a filename" initialValue:'sketch.png'];
+
+var sel = selection[0];
+var rect = [sel rectByAccountingForStyleSize:[[sel absoluteRect] rect]];
+
+[doc saveArtboardOrSlice:[GKRect rectWithRect:rect] toFile:fileName];
+}
+catch (e) {
+    log(e);
+}
